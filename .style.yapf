@@ -1,0 +1,10 @@
+[style]
+# yapf -vv -irp .
+# YAPF uses the chromium style
+based_on_style = chromium
+column_limit = 100
+indent_width = 4
+#based_on_style = google
+#BASED_ON_STYLE = pep8
+BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF = true
+SPLIT_BEFORE_EXPRESSION_AFTER_OPENING_PAREN = true
