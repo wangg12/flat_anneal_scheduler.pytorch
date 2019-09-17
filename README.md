@@ -1,4 +1,4 @@
-# Flat and anneal lr scheduler in pytorch
+## Flat and anneal lr scheduler in pytorch
 
 `warmup_method`:
 * `linear`
@@ -12,10 +12,10 @@
 * `linear`
 * `exp`
 
-# Usage:
+## Usage:
 See `test_flat_and_anneal()`.
 
-# Convention
+## Convention
 * The scheduler should be applied by iteration (or by batch) instead of by epoch.
 * `anneal_point` and `steps` are the percentages of the total iterations.
 * `init_warmup_lr = warmup_factor * base_lr`
