@@ -1,0 +1,28 @@
+_run:
+  install_system_deps: &install_system_deps
+    name: install_system_deps
+    command: |
+      sudo apt-get update
+      sudo apt-get install -y cmake python-pip python-dev build-essential protobuf-compiler libprotoc-dev
+
+version: 2
+jobs:
+  python_lint:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - run: *install_system_deps
+      - run:
+          name: setup lint
+          command: |
+              sudo pip install black
+      - run:
+          name: run black
+          command: black -l 120 . --check --diff
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - python_lint

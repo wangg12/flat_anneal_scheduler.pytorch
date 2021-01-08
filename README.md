@@ -1,4 +1,4 @@
-## Flat and anneal lr scheduler in pytorch
+## (WarmUp) (Cyclic) Flat and Anneal LR Scheduler in PyTorch
 
 `warmup_method`:
 * `linear`
